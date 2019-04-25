@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos/styles.css" type="text/css"/>
+    <title>Crear usuario</title>
+</head>
+<body>
+    <form id="formulario01" method="POST" action="../controladores/crear_usuario.php">
+        <label for="cedula">Cedula &nbsp;</label>
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese numero de cedula.." required/>
+    
+        <br>
+        <label for="nombres">Nombres &nbsp;</label>
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus nombres.." required/>
+
+        <br>
+        <label for="apellidos">Apellidos &nbsp;</label>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus apellidos" required/>
+
+        <br>
+        <label for="direccion">Direccion &nbsp;</label>
+        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su direccion" required/>
+
+        <br>
+        <label for="telefono">Telefono &nbsp;</label>
+        <input type="tel" id="telfono" name="telefono" value="" placeholder="Ingree su telefono" required/>
+
+        <br>
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha" value="" placeholder="Ingrese su fecha de nacimiento" required/>
+
+        <br>
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo" required/>
+        
+        <br>
+        <label for="correo">Contrasena</label>
+        <input type="password" id="Contrasena" name="contrasena" value="" placeholder="Ingrese su contrasena" required/>
+
+        <br>
+        <input type="submit" id="crear" name="crear" value="aceptar"/>
+        <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+    </form>
+</body>
+</html>
