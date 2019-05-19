@@ -5,7 +5,149 @@ table, td, th, tr{
     height: auto;
     text-align: center;
 }
-#formulario01{
-    margin:auto;
-    border:1px;
+form{
+    align-items: initial;
+}
+.formulario01{
+    padding: 0 2rem;
+    flex-direction: column;
+    justify-content: center;
+}
+.form{
+    align-items: initial;
+
+}
+
+.contenedor{
+    background-color: lightblue;
+    padding: 1px solid blue;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height:auto;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 500px;
+    background: rgba(0,0,0,.5);
+    margin: 5% auto;
+    padding: 60px 30px;
+    align-content: center;
+    box-sizing: border-box;
+
+}
+h1{
+    text-align: center;
+    text-decoration: cornsilk;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+body{
+    background-size: 100%;
+    background-image: url("../../../imagenes/fondoCrearUsuario.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+#LetrasMenu{
+    font-family: 'Times New Roman', Times, serif;
+    font-size-adjust: inherit;
+    color: white;
+}
+.avatar{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: calc(-80px/2);
+    left: calc(50% - 40px);
+}
+.container input[type = "text"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+
+}
+.container input[type="date"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.container input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.container input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.container input[type="tel"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.container input[type="submit"], .container input[type="reset"]{
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    background: red;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 15%;
+    align-items: center;
+}
+.pieDePagina{
+    clear: both;
+    position:absolute;
+    padding: 10px 700px;
+    top: 900px;
+    align-items: center;
+    align-content: center;
+    position: center;
+    background: rgba(0, 0, 0, .3);
+    
+}
+footer{
+    bottom: 10;
+    left: 30;
+    top: 90px;
+    position: absolute fixed;
+    right: 0;
+    align-content: center;
+    align-items: center;
+    position: center;
+}
+.bodyLogin{
+    background-image: url(../../../imagenes/loginpagina.png);
 }

@@ -7,42 +7,71 @@
     <link rel="stylesheet" href="estilos/styles.css" type="text/css"/>
     <title>Crear usuario</title>
 </head>
-<body>
-    <form id="formulario01" method="POST" action="../controladores/crear_usuario.php">
-        <label for="cedula">Cedula &nbsp;</label>
-        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese numero de cedula.." required/>
-    
-        <br>
-        <label for="nombres">Nombres &nbsp;</label>
-        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus nombres.." required/>
-
-        <br>
-        <label for="apellidos">Apellidos &nbsp;</label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus apellidos" required/>
-
-        <br>
-        <label for="direccion">Direccion &nbsp;</label>
-        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su direccion" required/>
-
-        <br>
-        <label for="telefono">Telefono &nbsp;</label>
-        <input type="tel" id="telfono" name="telefono" value="" placeholder="Ingree su telefono" required/>
-
-        <br>
-        <label for="fechaNac">Fecha de nacimiento</label>
-        <input type="date" id="fechaNac" name="fechaNac" value="" placeholder="Ingrese su fecha de nacimiento" required/>
-
-        <br>
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo" required/>
+<body >
+    <div class="contendor">
+        <div class="menu">
+            <ul>
+                <li><a href="login.html">Iniciar Sesion</a></li>
+            </ul>
+        </div>
         
+        </div>
+    </div>
+    <div class="container">
+        <form class="formulario01" method="POST" action="../controladores/crear_usuario.php">
+                <img src="../../imagenes/avatar.png" class="avatar"/>
+                <input class="actualizar" type="file" id="foto" name="foto" value="../../imagenes/avatar.png"/>
+                <label for="cedula" id="LetrasMenu">Cedula &nbsp;</label>
+                <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese numero de cedula.." required/>
+            
+                <br>
+                <label for="nombres" id="LetrasMenu">Nombres &nbsp;</label>
+                <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus nombres.." required/>
+        
+                <br>
+                <label for="apellidos" id="LetrasMenu">Apellidos &nbsp;</label>
+                <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus apellidos" required/>
+        
+                <br>
+                <label for="direccion" id="LetrasMenu">Direccion &nbsp;</label>
+                <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su direccion" required/>
+        
+                <br>
+                <label for="telefono" id="LetrasMenu">Telefono &nbsp;</label>
+                <input type="tel" id="telfono" name="telefono" value="" placeholder="Ingree su telefono" required/>
+        
+                <br>
+                <label for="fechaNac" id="LetrasMenu">Fecha de nacimiento</label>
+                <input type="date" id="fechaNac" name="fechaNac" value="" placeholder="Ingrese su fecha de nacimiento" required/>
+        
+                <br>
+                <label for="correo" id="LetrasMenu">Correo</label>
+                <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo" required/>
+                
+                <br>
+                <label for="correo" id="LetrasMenu">Contrasena</label>
+                <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contrasena" required/>
+        
+                <br>
+                <input type="submit" id="crear" name="crear" value="aceptar"/>
+                <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+        </form>
         <br>
-        <label for="correo">Contrasena</label>
-        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contrasena" required/>
+    <br>
+    <br>
+    <br>
+    </div>
+    
 
-        <br>
-        <input type="submit" id="crear" name="crear" value="aceptar"/>
-        <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
-    </form>
+    <div class="pieDePagina">
+        <footer>
+            <a>Alex J. Reinoso Gonzalez</a>
+            <address>
+                <a href="mailto:areinosog@est.ups.edu.ec">areinosog@est.ups.edu.ec</a>
+            </address>
+            <p>&copy; Todos los derechos reservados</p>
+        </footer>
+    </div>
+    
 </body>
 </html>

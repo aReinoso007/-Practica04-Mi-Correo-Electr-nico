@@ -22,10 +22,30 @@
             $correo     = isset($_POST["correo"]) ? trim($_POST["correo"]):null;
             $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]):null;
             $fechaNac   = isset($_POST["fechaNac"]) ? trim($_POST["fechaNac"]):null;
+
+
+            //Foto
+            $fotoN  =  $_FILES["foto"]["name"];
+            echo  "Nombre archivo =$fotoN";
+            $ruta = $_FILES["foto"]["tmp_name"];
+            echo "Ruta =$ruta";
+
+            if(empty($fotoN)){
+            $destino="../../config/fotos/perfil.jpg";
+            }else{
+                $random_digit = rand (0000,9999);
+	            $new_foto = $random_digit. $fotoN;
+                $ruta=$_FILES["foto"]["tmp_name"];
+                echo "Ruta = $ruta";
+                $destino="../../config/fotos/".$new_foto;
+                $new_foto='';
+                echo "destino = $destino";
+                copy($ruta, $destino);
+            }
     
 
-            $sql = "INSERT INTO usuario VALUES(0, '$cedula', '$nombres', '$apellidos', '$direccion', 
-            '$telefono', '$correo', MD5('$contrasena'), '$fechaNac', 'N', null, null)";
+            $sql = "INSERT INTO usuario() VALUES (0,'$cedula', '$nombres', '$apellidos', '$direccion', '$telefono',
+                    '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null, '$destino', 'user','Yes')";
 
             if($conn->query($sql) === TRUE){
                 echo "<p> Se ha creado los datos personales correctamente</p>";

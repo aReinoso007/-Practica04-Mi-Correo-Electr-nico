@@ -1,8 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
+    header("Location: ../../public/vista/login.html");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title> Configuracion</title>
+    <title> Gestion de Usuarios</title>
     <meta charset="UTF-8">
     <script type="text/javascript" src="ajax.js"></script>
 </head>
@@ -34,7 +41,7 @@
                 <th> Cambiar Contrasena</th>
             </tr>
             <?php
-                include "../../../config/conexionBD.php";
+                include "../../config/conexionBD.php";
                 $sql ="SELECT * FROM usuario";
                 $result=$conn->query($sql);
 
@@ -51,9 +58,10 @@
                         echo "  <td align=center>" .$row["usu_telefono"]."</td>";
                         echo "  <td align=center>" .$row["usu_correo"]."</td>";
                         echo "  <td align=center>" .$row["usu_fecha_nacimiento"]."</td>";
-                        echo "  <td align=center>" ."<a href='cambiar.php?codigo=$codigo'>Modificar</a>". "</td>";
-                        echo "  <td align=center>" ."<a href='../../controladores/eliminar.php?codigo=$codigo'>Eliminar</a>". "</td>";
-                        echo "  <td align=center>" ."<a href='contrasena.php?codigo=$codigo'>Cambiar Contrasena</a>". "</td>";
+
+                        echo " <td>" .'<a href="eliminar.php?usu_codigo='.$row["usu_codigo"]. '&delete=' . true .'" > Eliminar </a>'. "</td>";
+                        echo " <td>" .'<a href="modificar.php?usu_codigo='.$row["usu_codigo"].'" > Modificar </a>'. "</td>";
+                        echo " <td>" .'<a href="cambiarContrasena.php?usu_codigo='.$row["usu_codigo"].'" > Cambiar Contraseña </a>'. "</td>";
                         echo "</tr>";
                         }
                     }
