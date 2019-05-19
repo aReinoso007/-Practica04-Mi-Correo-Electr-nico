@@ -2,7 +2,7 @@
 $consulta =consultarUsuario($_GET['usu_codigo']);
 
 function consultarUsuario($usu_codigo){
-    include '../../config/conexionBD.php';
+    include '../../../config/conexionBD.php';
     $sql="SELECT * FROM usuario WHERE usu_codigo='".$usu_codigo."' ";
     $result=$conn->query($sql);
     $filas=$result->fetch_assoc();

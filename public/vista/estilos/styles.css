@@ -151,3 +151,10 @@ footer{
 .bodyLogin{
     background-image: url(../../../imagenes/loginpagina.png);
 }
+.perfil{
+    width: 150px;
+    height: 100px;
+}
+.bodyAdmin{
+    background-image: url(../../../imagenes/adminview.jpeg);
+}
