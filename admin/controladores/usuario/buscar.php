@@ -18,7 +18,7 @@
         $codigosC = $resultCod->fetch_assoc();
         $remitente=$codigosC['usu_codigo'];
 
-        $sql = "SELECT * FROM mensaje WHERE mensaje_remitente='$remitente' " ;
+        $sql = "SELECT * FROM mensaje WHERE usu_remitente='$remitente' " ;
         $result = $conn->query($sql);
 
         
@@ -27,13 +27,13 @@
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo " <td>" . $row["mensaje_fecha"] . "</td>";
-                $correODest = "SELECT * FROM usuario WHERE usu_codigo=".$row["mensaje_remitente"].";" ;
+                echo " <td>" . $row["mail_fecha"] . "</td>";
+                $correODest = "SELECT * FROM usuario WHERE usu_codigo=".$row["usu_remitente"].";" ;
                 $crreo = $conn->query($correODest);
                 $fila = $crreo->fetch_assoc();
                 echo " <td>" . $fila["usu_correo"] . "</td>";
-                echo " <td>" . $row['mensaje_asunto'] ."</td>";
-                echo " <td>" .'<a href="../../vista/usuario/verMail.php?mensaje_codigo='.$row["mensaje_codigo"].'" > Ver  </a>'."</td>";
+                echo " <td>" . $row['mail_asunto'] ."</td>";
+                echo " <td>" .'<a href="../../vista/usuario/verMail.php?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
                 echo "</tr>";
 
              }

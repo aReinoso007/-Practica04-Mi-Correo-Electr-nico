@@ -1,23 +1,23 @@
 <?php
 session_start();
 if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
-    header("Location: /PRACTICA04-MI-CORREO-ELECTRONICO/public/vista/login.html");
+    header("Location: ../../../public/vista/login.html");
 }
 
 
-$consulta=ConsultarMensaje($_GET['mensaje_codigo']);
+$consulta=ConsultarMensaje($_GET['mail_codigo']);
 
 function ConsultarMensaje($mensaje_codigo){
     include '../../../config/conexionBD.php';
 
-    $sql="SELECT * from mensaje WHERE mensaje_codigo='".$mensaje_codigo."' ";
+    $sql="SELECT * from mensaje WHERE mail_codigo='".$mensaje_codigo."' ";
     $result=$conn->query($sql);
     $filas=$result->fetch_assoc();
 
     return[
-        $filas['mensaje_asunto'],
-        $filas['mensaje_destino'],
-        $filas['mensaje_texto'],
+        $filas['mail_asunto'],
+        $filas['usu_destino'],
+        $filas['mail_mensaje'],
     
     ];
 
@@ -42,16 +42,16 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../../config/styles/nuevoMensaje.css">
+    <link rel="stylesheet" href="../../../config/styles/nuevoMail.css">
     <link rel="stylesheet" href="../../../config/styles/menuH.css">
-    <title>Document</title>
+    <title>Leer mensajes</title>
 </head>
 
 <body>
     <header>
         <div class="menu">
             <ul>
-                <li><a href="../usuario/mensajesRecibidos.php">REGRESAR</a></li>
+                <li><a href="mailRecibido.php">REGRESAR</a></li>
             </ul>
         </div>
 
@@ -74,6 +74,7 @@ $conn->close();
         </div>
 
     </form>
+    
 
 </body>
 

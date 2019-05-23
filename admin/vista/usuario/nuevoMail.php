@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../../config/styles/nuevoMail.css">
     <link rel="stylesheet" href="../../../config/styles/menuH.css">
-    <title>Contacto</title>
+    <title>Redactar</title>
 
 </head>
 

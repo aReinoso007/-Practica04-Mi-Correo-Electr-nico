@@ -4,7 +4,7 @@
     padding: 0;
 }
 body {
-    background-image: url(../../config/images/fondo.png);
+    background-image: url(../imagenes/fondoMail.jpg);
     /* background-repeat: no-repeat; */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -95,7 +95,7 @@ th, td {
 
 .barraBusqueda{
     background: rgba(179, 105, 35, 0.3);
-
+    padding: 20px, 20px, 20px, 20px ;
 }
 
 .nombreUser{

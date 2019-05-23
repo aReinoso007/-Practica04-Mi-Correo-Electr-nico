@@ -10,7 +10,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Index</title>
 </head>
 <body>
     <div class="contenedor">
@@ -21,7 +21,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
             <div class="menu">
                 <ul>
                     <li><a href="cerrarSesion.php">Log out</a></li>
-                    <li><a href="mailRecibido.php">Inbox</a></li>
+                    <li><a href="mailRecibido.php">Mensajeria</a></li>
                 </ul>
             </div>
         </header>
@@ -125,7 +125,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
         </table>
     </div>
     <div>
-        <footer id="footer">
+        <footer>
             <p class="footer">Universidad Politecnica Salesiana</p>
             <p class="footer">Alex Jessiel Reinoso Gonzalez</p>
             <p class="footer">Estudiante</p>

@@ -79,34 +79,33 @@
                 <?php
                    
                    include '../../../config/conexionBD.php';
-                   $codigoRemitente=$_GET['usu_codigo'];
-                   $sql = "SELECT * FROM mensaje  WHERE mensaje_destino='$codigoRemitente' ORDER BY mensaje_fecha DESC " ;
+                   $codigoRemitente=$_SESSION['codigo'];
+                   $sql = "SELECT * FROM mensaje  WHERE usu_remitente='$codigoRemitente' ORDER BY mail_fecha DESC " ;
                    $result = $conn->query($sql);
 
                    if ($result->num_rows > 0) {
 
-                   while($row = $result->fetch_assoc()) {
-                   echo "<tr>";
-                   echo " <td>" . $row["mensaje_fecha"] . "</td>";
-                   $correODest = "SELECT * FROM usuario WHERE usu_codigo=".$row["mensaje_remitente"].";" ;
+                     while($row = $result->fetch_assoc()) {
+                     echo "<tr>";
+                     echo " <td>" . $row["mail_fecha"] . "</td>";
+                   $correODest = "SELECT * FROM usuario WHERE usu_codigo=".$row["usu_destino"].";" ;
                    $crreo = $conn->query($correODest);
                    $fila = $crreo->fetch_assoc();
                    echo " <td>" . $fila["usu_correo"] . "</td>";
-                   echo " <td>" . $row['mensaje_asunto'] ."</td>";
-                   echo " <td>" .'<a href="verMensaje.php?mensaje_codigo='.$row["mensaje_codigo"].'" > Ver </a>'. "</td>";
-                   echo " <td>" .'<a href="../../../admin/controladores/administrador/eliminarMensaje.php?mensaje_codigo='.$row["mensaje_codigo"].'&delete=' . true .'" > Eliminar </a>'. "</td>";
+                   echo " <td>" . $row['mail_asunto'] ."</td>";
+                   echo " <td>" .'<a style="text-decoration: none; color:white" href="verMensaje.php?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
                    echo "</tr>";
 
                    }
 
-
+                   
                    } else {
                    echo "<tr>";
-                   echo " <td colspan='7'> No existen mensajes  </td>";
+                   echo " <td colspan='7'> No existen mensajes </td>";
                    echo "</tr>";
                    }
                    $conn->close();
-           ?>
+                ?>
 
             </table>
 

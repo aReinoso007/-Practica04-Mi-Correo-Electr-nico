@@ -32,7 +32,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
             <div class="menu">
                 <ul>
                     <li><a href="nuevoMail.php">Nuevo Mensaje</a></li>
-                    <li><a href="mailRecibidos.php">Mensajes Recibidos</a></li>
+                    <li><a href="mailRecibido.php">Mensajes Recibidos</a></li>
                     <li><a href="indexUsuario.php">Mi cuenta</a></li>
 
                     <?php

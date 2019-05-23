@@ -3,7 +3,7 @@ html {
     font-family: 'Lato', sans-serif;
 }
 .contenedor {
-    background-image: url(../../config/images/fondo.png);
+    background-image: url(../imagenes/fondoMail.jpg);
     background-size: 100%;
     /* background-repeat: no-repeat; */
     display: flex;

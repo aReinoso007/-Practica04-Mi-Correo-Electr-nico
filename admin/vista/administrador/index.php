@@ -15,21 +15,19 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
     <link rel="stylesheet" href="../../../config/styles/index.css">
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <?php
-            echo " <a href='../../../public/vista/login.html'>  Inicio  </a>" ;
-            echo "<a href='index.php'> Usuarios </a>";
-            echo "<a href = 'buscar.php'>Busqueda </a>";
-            echo "<a href='cerrarSesion.php'>Log out</a>"
-
-            ?>
-        </ul>
-    </nav>
-    </header>
-
 <body class="bodyAdmin">
+        <header>
+            <nav>
+                <ul>
+                    <?php
+                        echo " <a href='../../../public/vista/login.html'>  Inicio  </a>" ;
+                        echo "<a href='index.php'> Usuarios </a>";
+                        echo "<a href = 'buscar.php'>Busqueda </a>";
+                        echo "<a href='cerrarSesion.php'>Log out</a>"
+                    ?>
+                </ul>
+            </nav>
+        </header>
         <table style="width:100%">
             <tr>
                 <th>Cedula</th>
@@ -74,8 +72,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                         echo " <td>" .'<a href="eliminar.php?usu_codigo='.$row["usu_codigo"]. '&delete=' . true .'" > Eliminar </a>'. "</td>";
                         echo " <td>" .'<a href="modificar.php?usu_codigo='.$row["usu_codigo"].'" > Modificar </a>'. "</td>";
                         echo " <td>" .'<a href="cambiarContrasena.php?usu_codigo='.$row["usu_codigo"].'" > Cambiar Contraseña </a>'. "</td>";
-                        echo " <td>" .'<a href="recibidos.php?usu_codigo='.$row["usu_codigo"].'" > Ver inbox </a>'."</td>";
-                        echo " <td>" .'<a href="administrador/enviados.php?usu_codigo='.$row["usu_codigo"].'" > Ver outbox</a>'."</td>";
+                        echo " <td>" .'<a href="recibidos.php?usu_codigo='.$row["usu_codigo"].'" > Ver mensajes </a>'."</td>";
 
                         echo "</tr>";
                         }
@@ -85,8 +82,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
 
         </table>
         <div>
-        <div>
-        <footer id="footer">
+        <footer>
             <p class="footer">Universidad Politecnica Salesiana</p>
             <p class="footer">Alex Jessiel Reinoso Gonzalez</p>
             <p class="footer">Estudiante</p>
@@ -95,6 +91,5 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
             Todos los derechos reservados &copy; 
         </footer>
     </div>
-        </div>
 </body>
 </html>
