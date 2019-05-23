@@ -24,16 +24,19 @@ function ModificarUsuario ($codigo ,$cedula, $nombres, $apellidos, $direccion, $
         echo "Ruta = $ruta";
  
         if(empty($fotoN)){
-        $destino="../../config/fotos/perfil.jpg";
+                $consultarFoto="SELECT usu_foto from usuario where usu_codigo='".$codigo."'";
+                $result=$conn->query($consultarFoto);
+                $filas=$result->fetch_assoc();
+                $destino=$fila['usu_foto'];
         }else{
-        $random_digit = rand (0000,9999);
-	$new_foto = $random_digit. $fotoN;
-        $ruta=$_FILES["foto"]["tmp_name"];
-        echo "Ruta = $ruta";
-        $destino="../../../../config/fotos/".$new_foto;
-        $new_foto='';
-        echo "destino = $destino";
-        copy($ruta, $destino);
+                $random_digit = rand (0000,9999);
+	        $new_foto = $random_digit. $fotoN;
+                $ruta=$_FILES["foto"]["tmp_name"];
+                echo "Ruta = $ruta";
+                $destino="../../../config/fotos/".$new_foto;
+                $new_foto='';
+                echo "destino = $destino";
+                copy($ruta, $destino);
         }
 
         echo "Codigo=  $codigo";

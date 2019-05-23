@@ -26,16 +26,19 @@ function ModificarUsuario ($codigo ,$cedula, $nombres, $apellidos, $direccion, $
         echo "Ruta = $ruta";
  
         if(empty($fotoN)){
-        $destino="../../../config/fotos/1.jpeg";
-        }else{
-        $random_digit = rand (0000,9999);
-	$new_foto = $random_digit. $fotoN;
-        $ruta=$_FILES["foto"]["tmp_name"];
-        echo "Ruta = $ruta";
-        $destino="../../../config/fotos/".$new_foto;
-        $new_foto='';
-        echo "destino = $destino";
-        copy($ruta, $destino);
+                $consultarFoto="SELECT usu_foto from usuario where usu_codigo='".$codigo."'";
+                $result=$conn->query($consultarFoto);
+                $filas=$result->fetch_assoc();
+                $destino=$fila['usu_foto'];
+                }else{
+                $random_digit = rand (0000,9999);
+                $new_foto = $random_digit. $fotoN;
+                $ruta=$_FILES["foto"]["tmp_name"];
+                echo "Ruta = $ruta";
+                $destino="../../../config/fotos/".$new_foto;
+                $new_foto='';
+                echo "destino = $destino";
+                copy($ruta, $destino);
         }
 
         echo "Codigo=  $codigo";
@@ -48,7 +51,13 @@ function ModificarUsuario ($codigo ,$cedula, $nombres, $apellidos, $direccion, $
         usu_correo='".$correo."', usu_fecha_nacimiento='".$fechaNacimiento."', usu_fecha_modificacion='$fecha',
         usu_foto='$destino'  
         WHERE usu_codigo='".$codigo."'";
-        $conn->query($sql);
+
+        if ( $conn->query($sql) === TRUE) {
+        echo "<p>Se han modificado los datos!!!</p>";
+        header("Location: indexUsuario.php");
+        } else{
+        echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
+        }
         $conn->close();
 
        

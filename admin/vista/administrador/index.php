@@ -12,7 +12,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
     <title> Gestion de Usuarios</title>
     <meta charset="UTF-8">
     <script type="text/javascript" src="ajax.js"></script>
-    <link rel="stylesheet" href="../../../public/vista/estilos/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../config/styles/index.css">
 </head>
 
 <header>
@@ -22,6 +22,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
             echo " <a href='../../../public/vista/login.html'>  Inicio  </a>" ;
             echo "<a href='index.php'> Usuarios </a>";
             echo "<a href = 'buscar.php'>Busqueda </a>";
+            echo "<a href='cerrarSesion.php'>Log out</a>"
 
             ?>
         </ul>
@@ -83,6 +84,17 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
             ?>
 
         </table>
+        <div>
+        <div>
+        <footer id="footer">
+            <p class="footer">Universidad Politecnica Salesiana</p>
+            <p class="footer">Alex Jessiel Reinoso Gonzalez</p>
+            <p class="footer">Estudiante</p>
+            <p class="footer">Telefono: <a href="tel:+593998952718">0998952718</a></p>
+            <p class="footer">E-mail: <a href="mailto:areinosog@est.ups.edu.ec">areinosog@est.ups.edu.ec</a></p>
+            Todos los derechos reservados &copy; 
+        </footer>
+    </div>
+        </div>
 </body>
-
 </html>

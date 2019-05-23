@@ -101,36 +101,36 @@ function ConsultarUsuario($usu_codigo){
                     </div>
 
                 </div>
-
-
-                <div class="containerPicture">
-
-                    <div class="btn_form">
-
-                        <?php
-
-                            $imagen='';
+                    <div class="containerPicture">
+                        <div class="btn_form">
+                            <?php
+                                $imagen='';
                             
-                            if(strncmp($consulta[8],'../../../', 9) === 0   ){
-                                $imagen=$consulta[8];
-                           }else{
-                                $imagen='../'.$consulta[8];
-                           }
-                        ?>
-
-
-                        <img class="perfil" src='<?php echo ($imagen) ?>' alt="">
-                        <br>
-                        <input class="actualizar" type="file" id="foto" name="foto"
-                            value="../../../imagenes/e.jpg" />
+                                if(strncmp($consulta[8],'../../', 9) === 0   ){
+                                    $imagen=$consulta[8];
+                                }else{
+                                    $imagen='../'.$consulta[8];
+                                }
+                            ?>
+                            <img class="perfil" src='<?php echo ($imagen) ?>' alt="">
+                            <br>
+                            <input class="actualizar" type="file" id="foto" name="foto"
+                                value="../../../config/fotos/perfil.jpg" />
+                        </div>
                     </div>
 
-                </div>
-
             </form>
-
         </div>
-
+    </div>
+    <div>
+        <footer id="footer">
+            <p class="footer">Universidad Politecnica Salesiana</p>
+            <p class="footer">Alex Jessiel Reinoso Gonzalez</p>
+            <p class="footer">Estudiante</p>
+            <p class="footer">Telefono: <a href="tel:+593998952718">0998952718</a></p>
+            <p class="footer">E-mail: <a href="mailto:areinosog@est.ups.edu.ec">areinosog@est.ups.edu.ec</a></p>
+            Todos los derechos reservados &copy; 
+        </footer>
+    </div>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 <?php
  session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
-     header("Location: /PRACTICA04-MI-CORREO-ELECTRONICO/public/vista/login.html");
+     header("Location: ../../../public/vista/login.html");
  }
 ?>
 
@@ -25,10 +25,9 @@
     <header>
         <div class="menu">
             <ul>
-                <li><a href="../usuario/mailRecibido.php">VOLVER</a></li>
+                <li><a href="mailRecibido.php">VOLVER</a></li>
             </ul>
         </div>
-
     </header>
 
 

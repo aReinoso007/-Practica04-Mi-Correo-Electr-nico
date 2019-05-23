@@ -10,6 +10,6 @@ $conn->set_charset("utf8");
 if($conn->connect_error){
     die("conexion fallida".$conn->connect_error);
 }else{
-    echo "<p>conexion exitosa</p>";
+    echo "<p></p>";
 }
 ?>

@@ -17,6 +17,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
         <header>
             <input type="checkbox" id="btn_menu">
             <label for="btn_menu"><img class="menuIm" src="../../../config/imagenes/menu.png" alt="botonMenu"></label>
+            <link rel="stylesheet" href="../../../config/styles/index.css">
             <div class="menu">
                 <ul>
                     <li><a href="cerrarSesion.php">Log out</a></li>
@@ -30,13 +31,14 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
         <table style="width:100%">
             <tr>
                 <th>ID</th>
+                <th>Cedula</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Direccion</th>
                 <th>Telefono</th>
-                <th>Correo</th>
-                <th>Fecha nacimiento</th>
-                <th>Foto Perfil</th>
+                <th>correo</th>
+                <th>fecha de nacimiento</th>
+                <th>Foto de Perfil</th>
                 <th>Eliminar</th>
                 <th>Modificar</th>
                 <th>Cambiar contrasena</th>
@@ -63,11 +65,14 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                             echo " <td>" . $row['usu_telefono'] . "</td>";
                             echo " <td>" . $row['usu_correo'] . "</td>";
                             echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>";
-        
+
+                            echo($row["usu_foto"]);
+                            
                             if(strncmp($row["usu_foto"],'../../../', 9) === 0   ){
-                                echo " <td><img class='perfil' src='".$row["usu_foto"]."' ></td>";
+
+                            echo " <td><img class='perfil' src='".$row["usu_foto"]."' ></td>";
                             }else{
-                                    echo " <td><img class='perfil' src='../".$row["usu_foto"]."' ></td>";
+                            echo " <td><img class='perfil' src='../".$row["usu_foto"]."' ></td>";
                                 
                             }
                             echo " <td>" .'<a href="eliminar.php?usu_codigo='.$row["usu_codigo"]. '&delete=' . true .'" > Eliminar </a>'. "</td>";
@@ -120,6 +125,14 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
         </table>
     </div>
     <div>
+        <footer id="footer">
+            <p class="footer">Universidad Politecnica Salesiana</p>
+            <p class="footer">Alex Jessiel Reinoso Gonzalez</p>
+            <p class="footer">Estudiante</p>
+            <p class="footer">Telefono: <a href="tel:+593998952718">0998952718</a></p>
+            <p class="footer">E-mail: <a href="mailto:areinosog@est.ups.edu.ec">areinosog@est.ups.edu.ec</a></p>
+            Todos los derechos reservados &copy; 
+        </footer>
     </div>
    
 
