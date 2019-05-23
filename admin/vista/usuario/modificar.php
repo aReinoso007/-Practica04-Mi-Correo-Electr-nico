@@ -122,13 +122,13 @@ function ConsultarUsuario($usu_codigo){
             </form>
         </div>
     </div>
-    <div>
-        <footer id="footer">
-            <p class="footer">Universidad Politecnica Salesiana</p>
-            <p class="footer">Alex Jessiel Reinoso Gonzalez</p>
-            <p class="footer">Estudiante</p>
-            <p class="footer">Telefono: <a href="tel:+593998952718">0998952718</a></p>
-            <p class="footer">E-mail: <a href="mailto:areinosog@est.ups.edu.ec">areinosog@est.ups.edu.ec</a></p>
+    <div class="footer">
+        <footer >
+            <p id="footer">Universidad Politecnica Salesiana</p>
+            <p id="footer">Alex Jessiel Reinoso Gonzalez</p>
+            <p id="footer">Estudiante</p>
+            <p id="footer">Telefono: <a href="tel:+593998952718">0998952718</a></p>
+            <p id="footer">E-mail: <a href="mailto:areinosog@est.ups.edu.ec">areinosog@est.ups.edu.ec</a></p>
             Todos los derechos reservados &copy; 
         </footer>
     </div>

@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
     header("Location: ../../../public/vista/login.html");
@@ -40,8 +39,6 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                         $sqlF = "SELECT * FROM usuario WHERE usu_codigo=".$_SESSION['codigo'].";  " ;
                         $enlace = $conn->query($sqlF);
                         $foto = $enlace->fetch_assoc();
-
-
                         $imagen='';
                             
                         if(strncmp($foto['usu_foto'],'../../../', 9) === 0   ){
@@ -49,9 +46,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                        }else{
                             $imagen='../'.$foto['usu_foto'];
                        }
-
                        $conn->close();
-
                     ?>
 
 
@@ -92,9 +87,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                     $codigoRemitente=$_SESSION['codigo'];
                     $sql = "SELECT * FROM mensaje  WHERE usu_remitente='$codigoRemitente' ORDER BY mail_fecha DESC " ;
                     $result = $conn->query($sql);
-
                     if ($result->num_rows > 0) {
-
                       while($row = $result->fetch_assoc()) {
                       echo "<tr>";
                       echo " <td>" . $row["mail_fecha"] . "</td>";
@@ -103,11 +96,9 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                     $fila = $crreo->fetch_assoc();
                     echo " <td>" . $fila["usu_correo"] . "</td>";
                     echo " <td>" . $row['mail_asunto'] ."</td>";
-                    echo " <td>" .'<a style="text-decoration: none; color:white" href="verMensaje.php?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
+                    echo " <td>" .'<a style="text-decoration: none; color:white" href="verMail.php?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
                     echo "</tr>";
-
                     }
-
                     
                     } else {
                     echo "<tr>";

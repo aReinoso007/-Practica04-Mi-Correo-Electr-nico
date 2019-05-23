@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
-    header("Location: ../../public/vista/login.html");
+    header("Location: ../../../public/vista/login.html");
 }
 
 
@@ -16,8 +16,8 @@ function ConsultarMensaje($mensaje_codigo){
 
     return[
         $filas['mail_asunto'],
-        $filas['mail_destino'],
-        $filas['mail_texto'],
+        $filas['usu_destino'],
+        $filas['mail_mensaje'],
     
     ];
 
@@ -44,21 +44,21 @@ $conn->close();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../../config/styles/nuevoMail.css">
     <link rel="stylesheet" href="../../../config/styles/menuH.css">
-    <title>Document</title>
+    <title>Leer mensajes</title>
 </head>
 
 <body>
     <header>
         <div class="menu">
             <ul>
-                <li><a href="index.php">REGRESAR</a></li>
+                <li><a href="mailRecibido.php">REGRESAR</a></li>
             </ul>
         </div>
 
     </header>
 
 
-    <form method="POST" action="../../controladores/usuario/enviarMail.php">
+    <form method="POST" action="../../controladores/usuario/enviarMensaje.php">
 
         <div>
             <label for="Asunto">Asunto:</label>
@@ -74,6 +74,7 @@ $conn->close();
         </div>
 
     </form>
+    
 
 </body>
 

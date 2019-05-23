@@ -18,9 +18,10 @@
         </div>
     </div>
     <div class="container">
-        <form class="formulario01" method="POST" action="../controladores/crear_usuario.php">
+        <form class="formulario01" method="POST" action="../controladores/crear_usuario.php"
+                enctype="multipart/form-data">
                 <img src="../../imagenes/avatar.png" class="avatar"/>
-                <input class="actualizar" type="file" id="foto" name="foto" value="../../imagenes/avatar.png"/>
+                <input class="actualizar" type="file" id="fotoper" name="fotoper" value="../../imagenes/avatar.png"/>
                 <label for="cedula" id="LetrasMenu">Cedula &nbsp;</label>
                 <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese numero de cedula.." required/>
             

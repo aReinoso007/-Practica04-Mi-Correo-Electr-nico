@@ -1,26 +1,69 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body {
-    background-image: url(../imagenes/fondoMail.jpg);
+    background-image: url(../../imagenes/fondoContra.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-html {
-	font-size: 16px;
-    font-family: 'Lato', sans-serif;
+
+form {
+    position: absolute;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    background: rgba(0, 0, 0, .3);
+    font-family: cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+
+input {
+    display: block;
+    padding: 10px;
+    width: 95%;
+    font-size: 20px;
+    background-color: #EFEFEF;
+    border-radius: 1rem;
+}
+
+input[type="submit"]{
+    background: linear-gradient(#FFDA63, #FFB940);
+    border: 0;
+    color: brown;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+input[type="submit"]:hover{
+    opacity: 1;
+}
+
+input[type="submit"]:active{
+    transform: scale(0.95);
+}
 
 header{
     width: 100%;
     background: rgba(0, 0, 0, .3);
-    
 }
+
+form .contrasenia {
+    text-align: center;
+    color: #EDA135;
+
+}
+
 
 
 #btn_menu {
@@ -64,44 +107,6 @@ header label:hover{
    color: #fff;
    text-decoration: none;
 }
-
-table{
-    border: 1px solid #000;
-    padding: 2px;
-}
-
-th, td {
-    text-align: justify;
-    border: 1px solid #000;
-    padding: 4px;
- }
-
-.perfil{
-     width: 100px;
-     height: 100px;
-     border-radius: 50%;
- }
-
- .perfil1{
-    width: 100px;
-    height: 100px;
-    border-radius: 80%;
-}
-
-.titulo{
-    text-align: center;
-}
-
-.barraBusqueda{
-    background: rgba(179, 105, 35, 0.3);
-    padding: 20px, 20px, 20px, 20px ;
-}
-
-.nombreUser{
-    text-align: center;
-}
-
-
 footer{
     clear: both;
     display: block;

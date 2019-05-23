@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="script/javascript" htref="../../../config/Ajax/ajax.js"></script>
     <title>Document</title>
 </head>
 
@@ -27,13 +28,13 @@
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo " <td>" . $row["mail_fecha"] . "</td>";
+                echo " <td>" . $row["mensaje_fecha"] . "</td>";
                 $correODest = "SELECT * FROM usuario WHERE usu_codigo=".$row["usu_remitente"].";" ;
                 $crreo = $conn->query($correODest);
                 $fila = $crreo->fetch_assoc();
                 echo " <td>" . $fila["usu_correo"] . "</td>";
-                echo " <td>" . $row['mail_asunto'] ."</td>";
-                echo " <td>" .'<a href="../../vista/usuario/verMail.php?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
+                echo " <td>" . $row['mensaje_asunto'] ."</td>";
+                echo " <td>" .'<a href="../../vista/usuario/verMail.php ?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
                 echo "</tr>";
 
              }

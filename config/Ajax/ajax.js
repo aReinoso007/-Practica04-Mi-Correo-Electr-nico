@@ -1,3 +1,4 @@
+/*
 function buscarPorCedula(){
 
     var cedula = document.getElementById("cedula").value;
@@ -19,7 +20,7 @@ function buscarPorCedula(){
         xmlhttp.open("Get","buscar.php?cedula="+cedula, true);
         xmlhttp.send();
     }
-};
+};*/
 
 function buscarCorreo(){
     var rem=document.getElementById("barraBusqueda").value;
@@ -39,10 +40,9 @@ function buscarCorreo(){
                 document.getElementById("tabla").innerHTML=this.responseText;
             }
         }
-        XMLHttp.open("GET", "../../admin/controladores/usuario/buscar.php?remitente="+remitente,true);
+        XMLHttp.open("GET", "../../admin/controladores/usuario/buscar.php?remitente="+rem,true);
         XMLHttp.send();
 
     }
 
 };
-

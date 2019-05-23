@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Crear Nuevo Usuario</title>
-<style type="text/css" rel="stylesheet">
-    .error{
-        color:red;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Crear Nuevo Usuario</title>
+    <link rel="stylesheet" href="../estilos/styles.css">
 </head>
 <body>
     <?php
@@ -25,17 +21,17 @@
 
 
             //Foto
-            $fotoN  =  $_FILES["foto"]["name"];
-            echo  "Nombre archivo =$fotoN";
-            $ruta = $_FILES["foto"]["tmp_name"];
-            echo "Ruta =$ruta";
+            $fotoN  =  $_FILES["fotoper"]["name"];
+                //echo  "Nombre archivo =$fotoN";
+            $ruta = $_FILES["fotoper"]["tmp_name"];
+            //echo "Ruta =$ruta";
 
             if(empty($fotoN)){
             $destino="../../config/fotos/perfil.jpg";
             }else{
                 $random_digit = rand (0000,9999);
 	            $new_foto = $random_digit. $fotoN;
-                $ruta=$_FILES["foto"]["tmp_name"];
+                $ruta=$_FILES["fotoper"]["tmp_name"];
                 echo "Ruta = $ruta";
                 $destino="../../config/fotos/".$new_foto;
                 $new_foto='';
@@ -45,10 +41,11 @@
     
 
             $sql = "INSERT INTO usuario() VALUES (0,'$cedula', '$nombres', '$apellidos', '$direccion', '$telefono',
-                    '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null, '$destino', 'user','Yes')";
+                    '$correo', MD5('$contrasena'), '$fechaNac', 'N', null, null, '$destino', 'user','Yes')";
 
             if($conn->query($sql) === TRUE){
                 echo "<p> Se ha creado los datos personales correctamente</p>";
+                header("Location: ../vista/login.html");
             }else{
                 if($conn->errno==1062){
                     echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema</p>";
@@ -59,6 +56,7 @@
 
         $conn->close();
             echo "<a href= '../vista/crear_usuario.html'>Regresar</a>";
+
     ?>
 
 </body>

@@ -44,8 +44,6 @@
                         $sqlF = "SELECT * FROM usuario WHERE usu_codigo=".$_SESSION['codigo'].";  " ;
                         $enlace = $conn->query($sqlF);
                         $foto = $enlace->fetch_assoc();
-
-
                         $imagen='';
                             
                         if(strncmp($foto['usu_foto'],'../../../', 9) === 0   ){
@@ -53,9 +51,7 @@
                        }else{
                             $imagen='../'.$foto['usu_foto'];
                        }
-
                        $conn->close();
-
                     ?>
 
 
@@ -99,11 +95,9 @@
                    
                     $sql2="SELECT count(*) FROM mensaje  WHERE usu_destino='$codigoRemitente' ORDER BY mail_fecha DESC " ;
                     $res=$conn->query($sql2);
+                    
                     $num_rows=$res;
-
-
                    if ($num_rows > 0) {
-
                         while($row = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo " <td>" . $row["mail_fecha"] . "</td>";
@@ -114,10 +108,7 @@
                     echo " <td>" . $row['mail_asunto'] ."</td>";
                     echo " <td>" .'<a href="verMail.php?mail_codigo='.$row["mail_codigo"].'" > Ver  </a>'."</td>";
                     echo "</tr>";
-
                    }
-
-
                    } else {
                    echo "<tr>";
                    echo " <td colspan='7'> No existen mensajes  </td>";

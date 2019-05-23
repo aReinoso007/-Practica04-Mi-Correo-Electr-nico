@@ -16,18 +16,15 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
 </head>
 
 <body class="bodyAdmin">
-        <header>
-            <nav>
-                <ul>
-                    <?php
-                        echo " <a href='../../../public/vista/login.html'>  Inicio  </a>" ;
-                        echo "<a href='index.php'> Usuarios </a>";
-                        echo "<a href = 'buscar.php'>Busqueda </a>";
-                        echo "<a href='cerrarSesion.php'>Log out</a>"
-                    ?>
-                </ul>
-            </nav>
-        </header>
+        <div class="menu">
+            <header>
+                <nav>
+                    <ul>
+                    <li><a href="index.php">Mi cuenta</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
         <table style="width:100%">
             <tr>
                 <th>Cedula</th>
