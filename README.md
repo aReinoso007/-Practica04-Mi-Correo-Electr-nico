@@ -16,23 +16,23 @@ Luego, con base a estos ajustes realizados, se pide desarrollar una aplicación 
 hora, remitente, destinatario, asunto y mensaje. Para lo cual, se pide como mínimo los siguientes requerimientos:
 
 Usuario con rol de **user**:
-    * Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos   recibidos, ordenados por los más recientes.
-    * Visualizar el listado de todos los mensajes electrónicos enviados, ordenados por los más recientes.
-    * Enviar mensajes electrónicos a otros usuarios de la aplicación web.
-    * Buscar todos los mensajes electrónicos recibidos. La búsqueda se realizará por el correo del usuario remitente y se deberá aplicar Ajax para la búsqueda.
-    * Buscar todos los mensajes electrónicos enviados. La búsqueda se realizará por el correo del usuario destinatario y se deberá aplicar Ajax para la búsqueda. 
-    * Modificar los datos del usuario. 
-    * Cambiar la contraseña del usuario. 
-    * Agregar un avatar (fotografía) a la cuenta del usuario. 
+  * Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos   recibidos, ordenados por los más recientes.
+  * Visualizar el listado de todos los mensajes electrónicos enviados, ordenados por los más recientes.
+  * Enviar mensajes electrónicos a otros usuarios de la aplicación web.
+  * Buscar todos los mensajes electrónicos recibidos. La búsqueda se realizará por el correo del usuario remitente y se deberá aplicar Ajax para la búsqueda.
+  * Buscar todos los mensajes electrónicos enviados. La búsqueda se realizará por el correo del usuario destinatario y se deberá aplicar Ajax para la búsqueda. 
+  * Modificar los datos del usuario. 
+  * Cambiar la contraseña del usuario. 
+  * Agregar un avatar (fotografía) a la cuenta del usuario. 
 Usuario con rol de **admin**: 
-    * No puede recibir ni enviar mensajes electrónicos. 
-    * Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos, ordenados por los más recientes. 
-    * Eliminar los mensajes electrónicos de los usuarios con rol “user”.
-    * Eliminar, modificar y cambiar contraseña de los usuarios con rol “user”. 
+  * No puede recibir ni enviar mensajes electrónicos. 
+  * Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos, ordenados por los más recientes. 
+  * Eliminar los mensajes electrónicos de los usuarios con rol “user”.
+   * Eliminar, modificar y cambiar contraseña de los usuarios con rol “user”. 
 Por ultimo, se debe aplicar  parámetros de seguridad a través del uso de sesiones. Para lo cual, se debe tener en cuenta: 
-    * Un usuario “anónimo”, es decir, un usuario que no ha iniciado sesión puede acceder únicamente a los archivos de la carpeta pública. 
-    * Un usuario con rol de “admin” puede acceder únicamente a los archivos de la carpeta admin --> vista --> admin y admin --> controladores --> admin 
-    * Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
+   * Un usuario “anónimo”, es decir, un usuario que no ha iniciado sesión puede acceder únicamente a los archivos de la carpeta pública. 
+   * Un usuario con rol de “admin” puede acceder únicamente a los archivos de la carpeta admin --> vista --> admin y admin --> controladores --> admin 
+   * Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
  
  ![Estructura](https://aprende-web.net/css/objetos/diseno2.gif)
  <Figura 3. Diseño de un sitio web con base a tres columnas>
