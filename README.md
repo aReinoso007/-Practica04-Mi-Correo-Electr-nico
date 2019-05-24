@@ -33,27 +33,10 @@ Por ultimo, se debe aplicar  parámetros de seguridad a través del uso de sesio
    * Un usuario “anónimo”, es decir, un usuario que no ha iniciado sesión puede acceder únicamente a los archivos de la carpeta pública. 
    * Un usuario con rol de “admin” puede acceder únicamente a los archivos de la carpeta admin --> vista --> admin y admin --> controladores --> admin 
    * Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
+ ### Prototipo de ejemplo de archivos de index de la practica:
  
  ![Estructura](https://aprende-web.net/css/objetos/diseno2.gif)
  <Figura 3. Diseño de un sitio web con base a tres columnas>
- 
- De igual manera, se pide que se creé al menos tres archivos CSS, estos archivos estarán almacenados en una carpeta llamada css. Un archivo será para el diseño a dos columnas, otro archivo para el diseño a tres columnas, y los demás archivos será para la reglas CSS relacionas a textos, colores, tablas, secciones, artículos, etc.
- 
-También, se pide que se utilice selectores por etiquetas, selectores descendentes, selectores por clase y selectores por id. 
-
-Luego, se pide que se personalicen al menos tres etiquetas para títulos (h1 – h6), tanto en color, tamaño, fuente, decoraciones, etc. 
-
-Asimismo, se pide que se personalice todos los hipervínculos usando pseudo-clases. 
-
-También, se pide que se cree un menú vertical (navegación) para todas las páginas. El menú debe tener bordes ovalados, con color de fondo y una separación entre cada menú de al menos 5px. 
-
-De igual manera, se pide crear una nueva página HTML, en donde, se muestre un formulario de contacto que tenga los siguientes campos (nombre, correo electrónico, mensaje y botón para enviar)
-
-Asimismo, se pide que se utilice una gama de máximo cinco colores (ver más, https://htmlcolorcodes.com/es/recursos/mejor-paleta-de-colores-generadores/). 
-
-Finalmente, se pide que en toda la práctica existan al menos 50 reglas CSS. 
-
-**No es permitido el uso de plantillas (CSS o HTML).
 
 ###  ACTIVIDADES A DESARROLLAR
  1. Crear un repositorio en GitHub con el nombre “Practica02 – Mi Sitio Web (CSS)” 
