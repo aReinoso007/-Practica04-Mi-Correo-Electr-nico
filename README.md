@@ -35,8 +35,8 @@ Por ultimo, se debe aplicar  parámetros de seguridad a través del uso de sesio
    * Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
  ### Prototipo de ejemplo de archivos de index de la practica:
  
- ![Estructura](https://aprende-web.net/css/objetos/diseno2.gif)
- <Figura 3. Diseño de un sitio web con base a tres columnas>
+ ![Estructura](imagenes/fig2 (1).png).
+ <Figura 1.  *Index del usuario con rol "user"*>
 
 ###  ACTIVIDADES A DESARROLLAR
  1. Crear un repositorio en GitHub con el nombre “Practica02 – Mi Sitio Web (CSS)” 
