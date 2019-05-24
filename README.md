@@ -2,13 +2,13 @@
 ### **CARRERA:** INGENIERIA DE SISTEMAS/COMPUTACIÓN. **ASIGNATURA:** HIPERMEDIAL
 ### **NRO. PRÁCTICA:** 4. **TITULO PRÁCTICA:** Resolución de problemas sobre PHP y MySQL.
 ### **OBJETIVO**:
-  * Entender y organizar de una mejor manera los sitios de web en Internet 
-  * Diseñar adecuadamente elementos gráficos en sitios web en Internet
-  * Crear sitios web aplicando estándares actuales. 
+   * Entender y organizar de una mejor manera los sitios de web en Internet 
+   * Diseñar adecuadamente elementos gráficos en sitios web en Internet
+   * Crear sitios web aplicando estándares actuales. 
   ### INSTRUCCIONES
   Con base al archivo*Práctica 04 – Creación de una aplicación web usando PHP y Base de Dato*, se pide realizar los siguientes ajustes: 
-    a. Agregar roles a la tabla usuario. Un usuario puede tener un rol de “admin” o “user” 
-    b. Los usuarios con rol de “admin” pueden únicamente: modificar, eliminar y cambiar la contraseña de cualquier usuario de la base de datos.
+   a. Agregar roles a la tabla usuario. Un usuario puede tener un rol de “admin” o “user” 
+   b. Los usuarios con rol de “admin” pueden únicamente: modificar, eliminar y cambiar la contraseña de cualquier usuario de la base de datos.
     c. Los usuarios con rol de “user” pueden modificar, eliminar y cambiar la contraseña de su usuario. 
  
 Luego, con base a estos ajustes realizados, se pide desarrollar una aplicación web usando PHP y Base de Datos que permita gestionar 
