@@ -7,32 +7,32 @@
    * Crear sitios web aplicando estándares actuales. 
   ### INSTRUCCIONES
   Con base al archivo*Práctica 04 – Creación de una aplicación web usando PHP y Base de Dato*, se pide realizar los siguientes ajustes: 
-   a. Agregar roles a la tabla usuario. Un usuario puede tener un rol de “admin” o “user” 
-   b. Los usuarios con rol de “admin” pueden únicamente: modificar, eliminar y cambiar la contraseña de cualquier usuario de la base de datos.
-    c. Los usuarios con rol de “user” pueden modificar, eliminar y cambiar la contraseña de su usuario. 
+   * Agregar roles a la tabla usuario. Un usuario puede tener un rol de “admin” o “user” 
+   * Los usuarios con rol de “admin” pueden únicamente: modificar, eliminar y cambiar la contraseña de cualquier usuario de la base de datos.
+   * Los usuarios con rol de “user” pueden modificar, eliminar y cambiar la contraseña de su usuario. 
  
 Luego, con base a estos ajustes realizados, se pide desarrollar una aplicación web usando PHP y Base de Datos que permita gestionar 
 (enviar y recibir) mensajes electrónicos entre usuarios de la aplicación. De los mensajes electrónicos se desea conocer la fecha y 
 hora, remitente, destinatario, asunto y mensaje. Para lo cual, se pide como mínimo los siguientes requerimientos:
 
 Usuario con rol de **user**:
-    d. Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos   recibidos, ordenados por los más recientes.
-    e. Visualizar el listado de todos los mensajes electrónicos enviados, ordenados por los más recientes.
-    f. Enviar mensajes electrónicos a otros usuarios de la aplicación web.
-    g. Buscar todos los mensajes electrónicos recibidos. La búsqueda se realizará por el correo del usuario remitente y se deberá aplicar Ajax para la búsqueda.
-    h. Buscar todos los mensajes electrónicos enviados. La búsqueda se realizará por el correo del usuario destinatario y se deberá aplicar Ajax para la búsqueda. 
-    i. Modificar los datos del usuario. 
-    j. Cambiar la contraseña del usuario. 
-    k. Agregar un avatar (fotografía) a la cuenta del usuario. 
+    * Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos   recibidos, ordenados por los más recientes.
+    * Visualizar el listado de todos los mensajes electrónicos enviados, ordenados por los más recientes.
+    * Enviar mensajes electrónicos a otros usuarios de la aplicación web.
+    * Buscar todos los mensajes electrónicos recibidos. La búsqueda se realizará por el correo del usuario remitente y se deberá aplicar Ajax para la búsqueda.
+    * Buscar todos los mensajes electrónicos enviados. La búsqueda se realizará por el correo del usuario destinatario y se deberá aplicar Ajax para la búsqueda. 
+    * Modificar los datos del usuario. 
+    * Cambiar la contraseña del usuario. 
+    * Agregar un avatar (fotografía) a la cuenta del usuario. 
 Usuario con rol de **admin**: 
-    l. No puede recibir ni enviar mensajes electrónicos. 
-    m. Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos, ordenados por los más recientes. 
-    n. Eliminar los mensajes electrónicos de los usuarios con rol “user”.
-    o. Eliminar, modificar y cambiar contraseña de los usuarios con rol “user”. 
+    * No puede recibir ni enviar mensajes electrónicos. 
+    * Visualizar en su página principal (index.php) el listado de todos los mensajes electrónicos, ordenados por los más recientes. 
+    * Eliminar los mensajes electrónicos de los usuarios con rol “user”.
+    * Eliminar, modificar y cambiar contraseña de los usuarios con rol “user”. 
 Por ultimo, se debe aplicar  parámetros de seguridad a través del uso de sesiones. Para lo cual, se debe tener en cuenta: 
-     p. Un usuario “anónimo”, es decir, un usuario que no ha iniciado sesión puede acceder únicamente a los archivos de la carpeta pública. 
-     q. Un usuario con rol de “admin” puede acceder únicamente a los archivos de la carpeta admin --> vista --> admin y admin --> controladores --> admin 
-     r. Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
+    * Un usuario “anónimo”, es decir, un usuario que no ha iniciado sesión puede acceder únicamente a los archivos de la carpeta pública. 
+    * Un usuario con rol de “admin” puede acceder únicamente a los archivos de la carpeta admin --> vista --> admin y admin --> controladores --> admin 
+    * Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
  
  ![Estructura](https://aprende-web.net/css/objetos/diseno2.gif)
  <Figura 3. Diseño de un sitio web con base a tres columnas>
