@@ -36,7 +36,14 @@ Por ultimo, se debe aplicar  parámetros de seguridad a través del uso de sesio
  ### Prototipo de ejemplo de archivos de index de la practica:
  
  ![alt text](https://github.com/aReinoso007/-Practica04-Mi-Correo-Electr-nico/blob/master/imagenes/fig2%20(1).png)
+ 
+ 
  <Figura 1.  *Index del usuario con rol "user"*>
+ 
+ ![alt text](https://github.com/aReinoso007/-Practica04-Mi-Correo-Electr-nico/blob/master/imagenes/fig2%20(2).png)
+ 
+  <Figura 1.  *Index del usuario con rol "admin"*>
+
 
 ###  ACTIVIDADES A DESARROLLAR
  1. Crear un repositorio en GitHub con el nombre “Practica02 – Mi Sitio Web (CSS)” 
