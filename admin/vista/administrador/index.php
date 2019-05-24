@@ -21,6 +21,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged']===FALSE){
                 <nav>
                     <ul>
                     <li><a href="index.php">Mi cuenta</a></li>
+                    <li><
                     </ul>
                 </nav>
             </header>
