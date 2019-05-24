@@ -35,7 +35,7 @@ Por ultimo, se debe aplicar  parámetros de seguridad a través del uso de sesio
    * Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin --> vista --> user y admin --> controladores --> user 
  ### Prototipo de ejemplo de archivos de index de la practica:
  
- ![Estructura](imagenes/fig2 (1).png).
+ ![alt text](https://github.com/aReinoso007/-Practica04-Mi-Correo-Electr-nico/blob/master/imagenes/fig2%20(1).png)
  <Figura 1.  *Index del usuario con rol "user"*>
 
 ###  ACTIVIDADES A DESARROLLAR
